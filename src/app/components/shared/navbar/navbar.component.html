@@ -1,0 +1,199 @@
+<!-- Navbar -->
+<header class="container-fluid myHeaderTop no-gutters">
+
+    <div class="row">
+        <div class="col-12">
+            <nav (click)="removeClass()" class="navbar navbar-expand-lg">
+                <a #menu routerLinkActive="menu-active" routerLink="/" class="navbar-brand">
+                    <figure class="logo">
+                        <img src="./assets/img/logos/logo-sonoclean.svg" alt="sonoclean" width="100%" height="auto" />
+                    </figure>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <input type="checkbox" id="nav-toggle" />
+                    <label for="nav-toggle" class="hamburger-icon my-auto">
+                        <span class="navbar-toggler-icon"></span>
+                    </label>
+                </button>
+                <div class="collapse navbar-collapse shift" id="navbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active one-item">
+                            <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item one-item">
+                            <a class="nav-link" routerLinkActive="active"
+                                routerLink="/aplicaciones-de-limpieza">Aplicaciones</a>
+                        </li>
+                        <li class="nav-item dropdown menu-area d-block d-lg-none">
+
+                            <a #dropDwonElement (click)="status=!status"
+                                [ngClass]="status ? 'dropdown-toggle-opened' : 'dropdown-toggle-closed'"
+                                routerLinkActive="active" class="nav-link dropdown-toggle" id="mega-two" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Servicios de limpieza
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="mega-two">
+                                <div class="row myDropDownMenu">
+                                    <ul class="dropdown-menu__responsive">
+                                        <li><a routerLink="/servicios-de-limpieza/disolventes-aiii" title="limpieza de piezas base disolventes aiii">Limpieza Base
+                                                Disolvente</a></li>
+                                        <li><a routerLink="/servicios-de-limpieza/base-acuosa-camara" title="limpieza de piezas particulas base acuosa en camara">Limpieza Base
+                                                Acuosa</a></li>
+                                        <li><a
+                                                routerLink="/servicios-de-limpieza/hibrida-disolvententes-aiii-detergentes" title="limpieza de piezas con disolventes y agua con detergentes">Limpieza
+                                                Proceso Híbrido</a></li>
+                                        <li><a routerLink="/servicios-de-limpieza/ultrasonidos" title="servicio de limpieza con ultrasonidos">Limpieza con
+                                                Ultrasonidos</a></li>
+                                        <li><a routerLink="/servicios-perifericos" title="servicios perifericos y auxiliares sonoclean">Servicios Periféricos o
+                                                Complementarios</a></li>
+                                        <li><a routerLink="/servicios-de-limpieza">Ver todo</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown menu-area d-none d-lg-block">
+
+                            <a (click)="status=!status"
+                                [ngClass]="status ? 'dropdown-toggle-opened' : 'dropdown-toggle-closed'"
+                                #dropDwonElement routerLinkActive="active" class="nav-link dropdown-toggle"
+                                id="mega-two" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Servicios de limpieza
+                            </a>
+
+                            <div class="dropdown-menu mega-area animated fadeIn fast" aria-labelledby="mega-two">
+                                <div class="row myDropDownMenu">
+                                    <div routerLink="/servicios-de-limpieza/disolventes-aiii"
+                                        class="col-sm-6 col-lg-4 img-hover-effect">
+                                        <h2><span class="light">Limpieza</span><br> Base Disolvente</h2>
+                                        <figure>
+                                            <img src="./assets/img/aplicaciones-limpieza/servicio/limpieza-piezas-sonoclean-disolventes-aiii.jpg"
+                                                width="100%" height="auto" />
+                                        </figure>
+                                        <span class="common">Tipos de residuo</span>
+                                        <h3><span class="green">70%</span> orgánicos <span class="light">/ </span><span class="green">30%</span> inorgánicos</h3>
+                                        <hr>
+                                        <div class="myDropDownMenu__callToAction">
+                                            <ul>
+                                                <li>Aceites</li>
+                                                <li>Lubricantes</li>
+                                                <li>Siliconas</li>
+                                                <li>Ceras</li>
+                                            </ul>
+                                            <a class="myDropDownMenu__callToAction__link" routerLink="/servicios-de-limpieza/disolventes-aiii">ver
+                                                proceso</a>
+                                        </div>
+                                    </div>
+                                    <div routerLink="/servicios-de-limpieza/base-acuosa-camara"
+                                        class="col-sm-6 col-lg-4 img-hover-effect">
+                                        <h2><span class="light">Limpieza</span><br> Base Acuosa</h2>
+                                        <figure>
+                                            <img src="./assets/img/aplicaciones-limpieza/servicio/limpieza-piezas-sonoclean-ultrasonidos-base-acuosa.jpg"
+                                                width="100%" height="auto" />
+                                        </figure>
+                                        <span class="common">Tipos de residuo</span>
+                                        <h3><span class="green">70%</span> inorgánicos <span class="light">/ </span><span class="green">30%</span> orgánicos</h3>
+                                        <hr>
+
+                                        <div class="myDropDownMenu__callToAction">
+                                            <ul>
+                                                <li>Grasas</li>
+                                                <li>Aceites</li>
+                                                <li>Ceras</li>
+                                                <li>Petróleos</li>
+                                            </ul>
+                                            <a class="myDropDownMenu__callToAction__link" routerLink="/servicios-de-limpieza/base-acuosa-camara">ver
+                                                proceso</a>
+                                        </div>
+
+                                    </div>
+                                    <div routerLink="/servicios-de-limpieza/hibrida-disolvententes-aiii-detergentes"
+                                        class="col-sm-6 col-lg-4 img-hover-effect">
+                                        <h2><span class="light">Limpieza</span><br> Proceso Combinado</h2>
+                                        <figure>
+                                            <img src="./assets/img/aplicaciones-limpieza/servicio/limpieza-piezas-sonoclean-proceso-combinado-disolventes-aiii-base-acuosa.jpg"
+                                                width="100%" height="auto" />
+                                        </figure>
+                                        <span class="common">Tipos de residuo</span>
+                                        <h3><span lang="en"><span class="green">'Spot Free'</span>. Orgánicos e inorgánicos</span></h3>
+                                        <hr>
+
+                                        <div class="myDropDownMenu__callToAction">
+                                            <ul>
+                                                <li>Sales</li>
+                                                <li>Taladrinas</li>
+                                                <li>Aceites</li>
+                                                <li>Petróleos</li>
+                                            </ul>
+                                            <a class="myDropDownMenu__callToAction__link" routerLink="/servicios-de-limpieza/hibrida-disolvententes-aiii-detergentes">ver
+                                                proceso</a>
+                                        </div>
+
+                                        
+                                    </div>
+                                    <div routerLink="/servicios-de-limpieza/ultrasonidos"
+                                        class="col-sm-6 col-lg-4 img-hover-effect">
+                                        <h2><span class="light">Limpieza con</span><br> Ultrasonidos</h2>
+                                        <figure>
+                                            <img src="./assets/img/aplicaciones-limpieza/servicio/limpieza-piezas-sonoclean-ultrasonidos.jpg"
+                                                width="100%" height="auto" />
+                                        </figure>
+                                        <span class="common">Tipos de proceso</span>
+                                        <h3>Recuperación de piezas / XXL</h3>
+                                        <hr>
+                                        
+                                        <div class="myDropDownMenu__callToAction">
+                                            <ul>
+                                                <li>Grasas</li>
+                                                <li>Óxidos</li>
+                                                <li>Cal y sales</li>
+                                                <li>Carbonillas</li>
+                                            </ul>
+                                            <a class="myDropDownMenu__callToAction__link" routerLink="/servicios-de-limpieza/ultrasonidos">ver
+                                                proceso</a>
+                                        </div>
+                                    </div>
+                                    <div routerLink="/servicios-perifericos" class="col-sm-6 col-lg-4 img-hover-effect">
+                                        <h2><span class="light">Procesos</span><br> Complementarios y Periféricos</h2>
+                                        <figure>
+                                            <img src="./assets/img/aplicaciones-limpieza/servicio/proteccion-antioxidante-sonoclean-piezas-sector-automocion.jpg"
+                                                width="100%" height="auto" />
+                                        </figure>
+                                        <span class="common">Tipos de proceso</span>
+                                        <h3>Recuperación de piezas / XXL</h3>
+                                        <hr>
+                                        <div class="myDropDownMenu__callToAction">
+                                            <ul>
+                                                <li>Protección antioxidante</li>
+                                                <li>Control de partículas</li>
+                                                <li>Envasado en bolsas VCI</li>
+                                            </ul>
+                                            <a class="myDropDownMenu__callToAction__link" routerLink="/servicios-perifericos">ver
+                                                todos</a>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4 img-hover-effect">
+                                        <h2><span class="light">¿Cómo seleccionar</span><br> su proceso de limpieza?</h2>
+                                        <p>Si conoce cuál es el proceso de limpieza indicado para sus piezas seleccione la opción correspondiente, si no, haga clic en el botón para ver la sección con información detallada de cada proceso.</p>
+                                        <button class="button slide-left" routerLink="/servicios-de-limpieza">ver
+                                            todo</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item one-item p-175rem">
+                            <a class="nav-link" routerLinkActive="active" routerLink="/logistica-integral">Logística</a>
+                        </li>
+                        <li class="nav-item one-item">
+                            <a class="nav-link" routerLinkActive="active" routerLink="/contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>

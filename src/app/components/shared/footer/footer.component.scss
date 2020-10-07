@@ -1,0 +1,66 @@
+@import "../../../../styles.scss";
+
+.footer {
+    background-color: $dark;
+    background-image: url(../../../../assets/img/headers/backGroundDegreasers.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font: {
+        size: $common-font-size-lg;
+    }
+    &__links {
+        padding-top: $m-large * 1.5;
+        padding-bottom: $m-large * 1.5;
+        border-bottom: 1px solid rgba($color: white, $alpha: 0.2);
+        h4 {
+            font: {
+                size: $title-font-size-lg;
+            }
+        }
+        &__p {
+            @media (min-width: 1500px) {
+                padding-right: 20%;
+            }
+        }
+        &__ul {
+            @media (min-width: 992px) {
+                margin-left: -8px;
+            }
+            @include white-li;
+        }
+        &__adress-ul{
+            li {
+                @include a;
+                margin-bottom: $m-medium * 0.75;
+            }
+        }
+    }
+    &__bottom {
+        padding-top: $m-medium;
+        padding-bottom: $m-medium;
+        background-color: darken($color: $dark, $amount: 0%);
+        text-align: center;
+        @include a;
+    }
+}
+
+.call-to-action {
+    padding-top: $m-large;
+    padding-bottom: $m-large;
+    background-color: $turquoise;
+    background-image: url(../../../../assets/img/headers/backGroundDegreasers.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    h4 {
+        color: white;
+        margin-bottom: 0;
+        font: {
+            size: 2.1rem;
+        }
+    }
+    .button-white {
+        margin-top: 0;
+        margin-right: 0;
+    }
+}

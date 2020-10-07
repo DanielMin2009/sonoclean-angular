@@ -1,0 +1,106 @@
+@import "../../../styles.scss";
+
+.bg-intro-large {
+    background-image: url(../../../assets/img/headers/limpieza-piezas-disolventes-aiii-camara.jpg);
+}
+
+// Presentation Container
+.section {
+    &__presentation-row {
+        &__box-slider,
+        &__box-text {
+            p {
+                @media (min-width: 1400px) and (max-width: 1500px) {
+                    padding-right: 4%;
+                }
+                @media (min-width: 1500px) and (max-width: 1600px) {
+                    padding-right: 7%;
+                }
+                @media (min-width: 1600px) and (max-width: 1700px) {
+                    padding-right: 18%;
+                }
+                @media (min-width: 1700px) {
+                    padding-right: 20%;
+                }
+            }
+            .carousel-indicators {
+                position: absolute;
+                margin-bottom: 0;
+                @media (min-width: 1400px) and (max-width: 1500px) {
+                    bottom: -8%;
+                }
+                @media (min-width: 1500px) and (max-width: 1600px) {
+                    bottom: -4%;
+                }
+                @media (min-width: 1600px) {
+                    bottom: 0;
+                }
+                li {
+                    width: 12px;
+                    height: 12px;
+                    background-color: $turquoise;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                }
+            }
+            &__aplications {
+                @media (min-width: 1400px) and (max-width: 1500px) {
+                    padding: 2%;
+                }
+                @media (min-width: 1500px) and (max-width: 1600px) {
+                    padding: 4%;
+                }
+                @media (min-width: 1600px) and (max-width: 1700px) {
+                    padding: 6%;
+                }
+                @media (min-width: 1700px) {
+                    padding: 9%;
+                }
+                &__item {
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+                &__control-prev {
+                    @media (min-width: 1400px) and (max-width: 1500px) {
+                        left: 4%;
+                    }
+                    @media (min-width: 1500px) and (max-width: 1600px) {
+                        left: 5%;
+                    }
+                    @media (min-width: 1600px) and (max-width: 1700px) {
+                        left: 6%;
+                    }
+                    @media (min-width: 1700px) {
+                        left: 7%;
+                    }
+                    .carousel-control-prev-icon {
+                        width: 26px;
+                        height: 26px;
+                        background-image: url(../../../assets/img/icons/left-chevron.svg);
+                    }
+                }
+                &__control-next {
+                    @media (min-width: 1400px) and (max-width: 1500px) {
+                        right: 4%;
+                    }
+                    @media (min-width: 1500px) and (max-width: 1600px) {
+                        right: 5%;
+                    }
+                    @media (min-width: 1600px) and (max-width: 1700px) {
+                        right: 6%;
+                    }
+                    @media (min-width: 1700px) {
+                        right: 7%;
+                    }
+                    .carousel-control-next-icon {
+                        width: 26px;
+                        height: 26px;
+                        background-image: url(../../../assets/img/icons/right-chevron.svg);
+                    }
+                }
+            }
+        }
+    }
+}
