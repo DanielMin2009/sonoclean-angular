@@ -73,6 +73,13 @@
     margin: 0 -15px;
 }
 
+
+// Correction 15px margin
+@mixin correction-15px {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+}
+
 // Padding - Margin 0
 @mixin mp0 {
     margin: 0;
@@ -126,6 +133,7 @@
                     left: -40px;
                     content: "\f054";
                     font-family: "FontAwesome";
+                    color: $yellow;
                     @include transition;
                     transition-delay: 0.15s;
                     opacity: 0;

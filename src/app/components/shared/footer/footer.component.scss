@@ -18,7 +18,7 @@
                 size: $title-font-size-lg;
             }
         }
-        &__p {
+        &__p { 
             @media (min-width: 1500px) {
                 padding-right: 20%;
             }
@@ -45,22 +45,4 @@
     }
 }
 
-.call-to-action {
-    padding-top: $m-large;
-    padding-bottom: $m-large;
-    background-color: $turquoise;
-    background-image: url(../../../../assets/img/headers/backGroundDegreasers.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    h4 {
-        color: white;
-        margin-bottom: 0;
-        font: {
-            size: 2.1rem;
-        }
-    }
-    .button-white {
-        margin-top: 0;
-        margin-right: 0;
-    }
-}
+

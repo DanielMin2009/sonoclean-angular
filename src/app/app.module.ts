@@ -24,6 +24,9 @@ import { AvisoLegalComponent } from './views/aviso-legal/aviso-legal.component';
 import { CreditosComponent } from './views/creditos/creditos.component';
 import { MapaDelSitioComponent } from './views/mapa-del-sitio/mapa-del-sitio.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { CallToActionComponent } from './components/shared/call-to-action/call-to-action.component';
+import { ClientsComponent } from './components/shared/clients/clients.component';
+import { CorporativeBarComponent } from './components/shared/corporative-bar/corporative-bar.component';
 
 
 
@@ -48,6 +51,9 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     HibridaDisolvententesAiiiDetergentesComponent,
     UltrasonidosComponent,
     FooterComponent,
+    CallToActionComponent,
+    ClientsComponent,
+    CorporativeBarComponent,
   ],
   imports: [
     BrowserModule,

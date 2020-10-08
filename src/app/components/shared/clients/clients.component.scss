@@ -1,0 +1,43 @@
+@import "../../../../styles.scss";
+
+.clients {
+    padding-top: $m-large * 1.5;
+    padding-bottom: $m-large;
+    &__container {
+        h2 {
+            @include h2;
+        }
+        picture {
+            img {
+                margin-bottom: $m-medium / 2;
+            }
+        }
+        hr {
+            @media (max-width: 992px) {
+                margin: 16px 0 16px 0;
+            }
+            @media (min-width: 992px) {
+                margin: 20px 0 20px 0;
+            }
+        }
+        &__logos-grid {
+            display: grid;
+            grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+            grid-column-gap: 5%;
+            grid-row-gap: 1.64rem;
+            justify-items: stretch;
+            align-items: stretch;
+            padding-bottom: 3rem;
+            padding-top: 3rem;
+            @media only screen and (max-width: 768px) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            @media only screen and (min-width: 768px) and (max-width: 992px) {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            }
+            @media only screen and (min-width: 992px) {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            }
+        }
+    }
+}

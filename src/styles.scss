@@ -159,7 +159,7 @@ button {
     color: rgba($color: white, $alpha: 1);
     font-weight: 500;
     position: relative;
-    z-index: 9;
+    z-index: 1;
     @include transition;
     overflow: hidden;
     border: 2px solid white;
@@ -230,9 +230,9 @@ button {
     background-position-y: bottom;
 
     @media (min-width: 1200px) {
-        // height: calc(60vh + 103px);
-        // padding-top: 103px;
-        height: 60vh;
+        height: calc(60vh + 103px);
+        padding-top: 103px;
+        // height: 60vh;
     }
 
     div {
@@ -342,10 +342,9 @@ button {
     background-color: darken($color: $turquoise, $amount: 8%);
 
     @media (min-width: 1200px) {
-        // height: calc(40vh + 103px);
-        // padding-top: 103px;
-        height: 40vh;
-        
+        height: calc(40vh + 103px);
+        padding-top: 103px;
+        // height: 40vh;    
     }
 
     div {

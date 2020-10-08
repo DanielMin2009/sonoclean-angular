@@ -1,8 +1,9 @@
 @import "../../../../styles.scss";
 
 header {
-    position: -webkit-sticky;
-    position: sticky;
+    @media (min-width: 992px) {
+        position: fixed;
+    }
     z-index: 4;
     background-color: rgba(white, 98%);
     @include box-shadow;
@@ -167,7 +168,7 @@ header {
                         &:hover {
                             color: $turquoise;
                             &::before {
-                                top: calc(100% + 19px);
+                                top: calc(100% + 18px);
                                 height: 4px;
                             }
                         }
