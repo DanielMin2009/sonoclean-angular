@@ -248,6 +248,7 @@ header {
                 padding-bottom: 0.88rem;
                 padding-left: 0;
                 ul {
+                    line-height: 120%;
                     li {
                         @include commonText;
                         color: $dark;
