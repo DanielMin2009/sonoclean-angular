@@ -58,6 +58,9 @@ body {
     margin-left: 0;
     margin-right: 0;
 }
+figure {
+    margin: 0;
+}
 .container,
 .container-lg,
 .container-xl {
@@ -437,6 +440,12 @@ button {
 
 // Layout
 .section {
+    h2 {
+        @include h2;
+    }
+    hr {
+        margin-left: 0;
+    }
     @media (max-width: 992px) {
         padding-top: $m-large * 0.75;
         padding-bottom: $m-large * 0.75;

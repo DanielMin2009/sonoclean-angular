@@ -27,6 +27,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { CallToActionComponent } from './components/shared/call-to-action/call-to-action.component';
 import { ClientsComponent } from './components/shared/clients/clients.component';
 import { CorporativeBarComponent } from './components/shared/corporative-bar/corporative-bar.component';
+import { ServicesLinksComponent } from './components/shared/services-links/services-links.component';
 
 
 
@@ -54,6 +55,7 @@ import { CorporativeBarComponent } from './components/shared/corporative-bar/cor
     CallToActionComponent,
     ClientsComponent,
     CorporativeBarComponent,
+    ServicesLinksComponent,
   ],
   imports: [
     BrowserModule,
