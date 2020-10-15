@@ -10,7 +10,9 @@
     background: $turquoise;
 }
 // Correction Default Styles
-* {
+*,
+*:after,
+*:before {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -82,6 +84,16 @@ hr {
 .light {
     font: {
         weight: $normal;
+    }
+}
+.medium {
+    font: {
+        weight: $medium;
+    }
+}
+.bold {
+    font: {
+        weight: $bold;
     }
 }
 .green {
@@ -439,7 +451,7 @@ button {
 }
 
 // Layout
-.section {
+.section  {
     h2 {
         @include h2;
     }
@@ -461,7 +473,7 @@ button {
 }
 
 // Common Section
-.section {
+.section{
     &__presentation-row {
         &__box-slider,
         &__box-text {
@@ -488,5 +500,16 @@ button {
                 line-height: $line-height;
             }
         }
+    }
+}
+
+.generic-section {
+    padding-top: $m-large;
+    @include guttersCorrection;
+    h2 {
+        @include h2;
+    }
+    hr {
+        margin-left: 0;
     }
 }

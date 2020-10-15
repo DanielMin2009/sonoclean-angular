@@ -1,8 +1,8 @@
 @import "../../../../styles.scss";
 
 .clients {
-    padding-top: $m-large * 1.5;
     padding-bottom: $m-large;
+    padding-top: $m-large;
     &__container {
         h2 {
             @include h2;
