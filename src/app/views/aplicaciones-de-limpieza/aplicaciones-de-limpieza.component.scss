@@ -5,3 +5,122 @@
     background-position-y: middle;
 }
 
+.aplicaciones {
+    &__container {
+        &__row {
+            &__col {
+                padding-top: $m-large / 2;
+
+                @include guttersCorrection;
+
+                &__figcaptionTop,
+                &__figcaptionMiddle,
+                &__figcaptionBottom {
+                    position: absolute;
+                    color: white;
+                    text-align: center;
+                    h3 {
+                        margin-bottom: $m-medium / 6;
+                        font : {
+                            weight: bold;
+                        }
+                        @media (max-width: 786px) {
+                            font : {
+                                size: $common-font-size-lg;
+                            }
+                        }
+                        @media (min-width: 786px) {
+                            font : {
+                                size: $title-font-size-sm;
+                            }
+                        }
+                    }
+                    h4 {
+                        font : {
+                            weight: normal;
+                        }
+                        @media (max-width: 786px) {
+                            font : {
+                                size: $small-font-lg;
+                            }
+                        }
+                        @media (min-width: 786px) {
+                            font : {
+                                size: $common-font-size-lg;
+                            }
+                        }
+                    }
+                }
+                &__figcaptionTop {
+                    top: 33%;
+                    @media (max-width: 786px) {
+                        right: 16%;
+                    }
+                    @media (min-width: 786px) {
+                        right: 21%;
+                    }
+                }
+                &__figcaptionMiddle {
+                    top: 47%;
+                    @media (max-width: 786px) {
+                        left: 40%;
+                    }
+                    @media (min-width: 786px) {
+                        left: 44%;
+                    }
+                }
+                &__figcaptionBottom {
+                    top: 63%;
+                    @media (max-width: 786px) {
+                        left: 20%;
+                    }
+                    @media (min-width: 786px) {
+                        left: 26%;
+                    }
+                }
+            }
+            &__col-legend {
+                @include guttersCorrection;
+                margin-top: $m-large;
+                margin-bottom: $m-large;
+                ul {
+                    li {
+                        margin-bottom: $m-large / 3;
+                        font: {
+                            weight: $medium;
+                        }
+                        img {
+                            margin-left: $m-medium / 2;
+                        }
+                        &:nth-child(1) {
+                            @media (max-width: 786px) {
+                                margin-left: 20%;
+                            }
+                            @media (min-width: 786px) {
+                                margin-left: 40%;
+                            }
+                        }
+                        &:nth-child(2) {
+                            margin-left: 15%;
+                        }
+                        &:nth-child(3) {
+                            @media (max-width: 786px) {
+                                margin-left: 26%;
+                            }
+                            @media (min-width: 786px) {
+                                margin-left: 55%;
+                            }
+                        }
+                        &:nth-child(4) {
+                            margin-left: 10%;
+                        }
+                        &:nth-child(5) {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// grafico-aplicaciones-limpieza-01.svg

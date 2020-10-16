@@ -470,10 +470,6 @@ button {
         padding-top: $m-large * 1.5;
         padding-bottom: $m-large * 1.5;
     }
-}
-
-// Common Section
-.section{
     &__presentation-row {
         &__box-slider,
         &__box-text {
@@ -503,13 +499,9 @@ button {
     }
 }
 
+// Common Section
+
+
 .generic-section {
-    padding-top: $m-large;
-    @include guttersCorrection;
-    h2 {
-        @include h2;
-    }
-    hr {
-        margin-left: 0;
-    }
+    @include introSection;
 }

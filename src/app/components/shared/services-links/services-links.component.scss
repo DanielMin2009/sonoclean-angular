@@ -2,7 +2,7 @@
 
 // Presentation Container
 .section {
-    padding-top: $m-large * 0.75;
+    padding-top: $m-large;
     padding-bottom: $m-large * 1.25;
     // background-color: rgba($color: $ecru, $alpha: 0.4);
     @include guttersCorrection;
@@ -12,12 +12,13 @@
             padding-right: 15px;
         }
         &__article {
-            // padding-top: $m-large / 1.5;
+            
             display: grid;
             grid-column-gap: $m-large / 2;
             grid-row-gap: $m-large / 2;
             @media (max-width: 786px) {
                 grid-template-columns: 1fr;
+                @include guttersCorrection;
             }
 
             @media (min-width: 786px) and (max-width: 1600px) {

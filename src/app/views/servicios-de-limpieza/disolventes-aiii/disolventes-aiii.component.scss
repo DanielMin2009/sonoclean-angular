@@ -3,3 +3,19 @@
 .bg-intro-large {
     background-image: url(../../../../assets/img/headers/limpieza-piezas-disolventes-aiii-camara.jpg);
 }
+
+.disolventes {
+    @include introSection;
+    &__container {
+        &__row {
+            &__col {
+                &__processGrid {
+                    display: grid;
+                    grid-template-columns: repeat(14, 1fr);
+                    grid-column-gap: 3%;
+                }
+            }
+            &__col-moreinfoService {}
+        }
+    }
+}

@@ -142,3 +142,15 @@
         }
     }
 }
+
+
+@mixin introSection {
+    padding-top: $m-large * 1.25;
+    @include guttersCorrection;
+    h2 {
+        @include h2;
+    }
+    hr {
+        margin-left: 0;
+    }
+}
