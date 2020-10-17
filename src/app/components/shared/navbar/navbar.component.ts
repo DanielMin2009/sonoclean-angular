@@ -17,6 +17,7 @@ import { Router } from "@angular/router";
 })
 export class NavbarComponent implements OnInit {
   @ViewChild("dropDwonElement") dropDwonElement: ElementRef;
+  @ViewChild("dropDwonResponsive") dropDwonResponsive: ElementRef;
 
   status: boolean = false;
 

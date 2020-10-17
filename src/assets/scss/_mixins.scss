@@ -153,4 +153,11 @@
     hr {
         margin-left: 0;
     }
+    p,
+    li {
+        font: {
+            size: $common-font-size-lg;
+        }
+        line-height: $line-height;
+    }
 }

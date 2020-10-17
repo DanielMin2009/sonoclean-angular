@@ -11,11 +11,33 @@
             &__col {
                 &__processGrid {
                     display: grid;
-                    grid-template-columns: repeat(14, 1fr);
-                    grid-column-gap: 3%;
+
+                    @media (max-width: 768px) {
+                        grid-template-columns: repeat(7, 1fr);
+                        grid-template-rows: auto;
+                    }
+                    @media (min-width: 768px) {
+                        grid-template-columns: repeat(14, 1fr);
+                    }
+                    figure {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        border: 1px solid $turquoise;
+                        figcaption {
+                            text-align: center;
+                            font : {
+                                size: $small-font-lg;
+                                weight: $light;
+                            }
+                        }
+                    }
                 }
             }
-            &__col-moreinfoService {}
+            &__col-moreinfoService {
+                margin-top: $m-large;
+                margin-bottom: $m-large;
+            }
         }
     }
 }
