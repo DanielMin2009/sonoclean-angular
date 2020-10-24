@@ -16,7 +16,7 @@
         style: normal;
     }
     @media (max-width: 992px) {
-        font-size: 2.14rem;
+        font-size: 2rem;
     }
     @media (min-width: 992px) {
         font-size: 2.26rem;
@@ -159,5 +159,10 @@
             size: $common-font-size-lg;
         }
         line-height: $line-height;
+    }
+    h3 {
+        @include h2;
+        margin-top: $m-medium;
+        margin-bottom: $m-medium;
     }
 }

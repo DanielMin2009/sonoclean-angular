@@ -102,6 +102,74 @@ hr {
 .common {
     @include commonText;
 }
+.bg-ecru {
+    background-color: rgba($color: $ecru, $alpha: 0.5);
+}
+.mt-large {
+    @media (max-width: 992px) {
+        margin-top: $m-large * 0.75;
+    }
+    @media (min-width: 992px) {
+        margin-top: $m-large;
+    }
+}
+.mb-large {
+    @media (max-width: 992px) {
+        margin-bottom: $m-large * 0.75;
+    }
+    @media (min-width: 992px) {
+        margin-bottom: $m-large;
+    }
+}
+.pt-large {
+    @media (max-width: 992px) {
+        padding-top: $m-large * 0.75;
+    }
+    @media (min-width: 992px) {
+        padding-top: $m-large;
+    }
+}
+.pb-large {
+    @media (max-width: 992px) {
+        padding-bottom: $m-large * 0.75;
+    }
+    @media (min-width: 992px) {
+        padding-bottom: $m-large;
+    }
+}
+
+.mt-medium {
+    @media (max-width: 992px) {
+        margin-top: $m-large * 0.25;
+    }
+    @media (min-width: 992px) {
+        margin-top: $m-large / 2;
+    }
+}
+.mb-medium {
+    @media (max-width: 992px) {
+        margin-bottom: $m-large * 0.25;
+    }
+    @media (min-width: 992px) {
+        margin-bottom: $m-large / 2;
+    }
+}
+.pt-medium {
+    @media (max-width: 992px) {
+        padding-top: $m-large * 0.25;
+    }
+    @media (min-width: 992px) {
+        padding-top: $m-large / 2;
+    }
+}
+.pb-medium {
+    @media (max-width: 992px) {
+        padding-bottom: $m-large * 0.25;
+    }
+    @media (min-width: 992px) {
+        padding-bottom: $m-large / 2;
+    }
+}
 // Button
 button {
     border: none;
@@ -244,6 +312,14 @@ button {
     background-size: cover;
     background-position-y: bottom;
 
+    @media (max-width: 1200px) {
+        min-height: calc(60vh + 103px);
+        padding-top: 103px;
+        // height: 60vh;
+        padding-top: $m-large / 1.5;
+        padding-bottom: $m-large / 1.5;
+    }
+
     @media (min-width: 1200px) {
         height: calc(60vh + 103px);
         padding-top: 103px;
@@ -289,6 +365,7 @@ button {
             width: 100%;
         }
         h2,
+        h3,
         p {
             padding-top: $m-medium;
             color: white;
@@ -356,6 +433,14 @@ button {
     background-repeat: no-repeat;
     background-color: darken($color: $turquoise, $amount: 8%);
 
+    @media (max-width: 1200px) {
+        min-height: calc(40vh + 103px);
+        padding-top: 103px;
+        // height: 40vh;
+        padding-top: $m-large / 1.5;
+        padding-bottom: $m-large / 1.5;
+    }
+
     @media (min-width: 1200px) {
         height: calc(40vh + 103px);
         padding-top: 103px;
@@ -390,6 +475,7 @@ button {
             width: 66%;
         }
         h2,
+        h3,
         p {
             padding-top: $m-medium;
             color: white;
@@ -505,3 +591,4 @@ button {
 .generic-section {
     @include introSection;
 }
+

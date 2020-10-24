@@ -5,27 +5,61 @@
 }
 
 .disolventes {
+    padding-bottom: $m-large;
     @include introSection;
     &__container {
         &__row {
             &__col {
+                &__icon {
+                    border-radius: 50%;
+                    border: 1px solid $turquoise;
+                    padding: $m-medium / 2;
+                }
+                &__text {
+                    hr {
+                        @media (max-width: 992px) {
+                            margin: 16px 0 16px 0;
+                        }
+                        @media (min-width: 992px) {
+                            margin: 20px 0 20px 0;
+                        }
+                    }
+                }
                 &__processGrid {
                     display: grid;
-
-                    @media (max-width: 768px) {
-                        grid-template-columns: repeat(7, 1fr);
+                    margin-bottom: $m-large;
+                    margin-top: $m-large / 2;
+                    @media (max-width: 576px) {
+                        grid-template-columns: repeat(3, 1fr);
                         grid-template-rows: auto;
                     }
-                    @media (min-width: 768px) {
+                    @media (min-width: 576px) and (max-width: 1200px) {
+                        grid-template-columns: repeat(7, 1fr);
+                        grid-template-rows: auto;
+                        row-gap: $m-large;
+                    }
+                    @media (min-width: 1200px) {
                         grid-template-columns: repeat(14, 1fr);
+                        row-gap: $m-large;
                     }
                     figure {
-                        width: 70px;
-                        height: 70px;
                         border-radius: 50%;
                         border: 1px solid $turquoise;
+                        @media (max-width: 768px) {
+                            width: 60px;
+                            height: 60px;
+                        }
+                        @media (min-width: 768px) {
+                            width: 70px;
+                            height: 70px;
+                        }
+                        img {
+                            padding: 5%;
+                        }
                         figcaption {
                             text-align: center;
+                            margin-top: $m-medium / 2;
+                            line-height: 126%;
                             font : {
                                 size: $small-font-lg;
                                 weight: $light;
@@ -34,9 +68,36 @@
                     }
                 }
             }
+            &__col-machineImage {
+                margin-top: $m-large * 0.75;
+                figcaption {
+                    text-align: left;
+                    line-height: 126%;
+                    margin-top: $m-medium / 2;
+                    font : {
+                        size: $small-font-lg;
+                        weight: $light;
+                    }
+                }
+            }
             &__col-moreinfoService {
-                margin-top: $m-large;
-                margin-bottom: $m-large;
+                @media (max-width: 992px) {
+                    margin-top: $m-large * 0.25;
+                }
+                @media (min-width: 992px) {
+                    margin-top: $m-large * 0.75;
+                }
+                ul {
+                    li {
+                        &::before {
+                            position: relative;
+                            left: -4px;
+                            content: "\f00c";
+                            font-family: "FontAwesome";
+                            color: $turquoise;
+                        }
+                    }
+                }
             }
         }
     }
