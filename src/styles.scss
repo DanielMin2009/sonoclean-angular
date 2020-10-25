@@ -562,6 +562,13 @@ button {
                 font-size: 1.1rem;
             }
         }
+        .description {
+            line-height: 126%;
+            font : {
+                size: $small-font-lg;
+                weight: $light;
+            }
+        }
         .breadcrumb {
             @include h2;
             background-color: transparent;
