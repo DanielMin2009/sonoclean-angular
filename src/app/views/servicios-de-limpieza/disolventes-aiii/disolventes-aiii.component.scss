@@ -14,6 +14,7 @@
                     border-radius: 50%;
                     border: 1px solid $turquoise;
                     padding: $m-medium / 2;
+                    margin-right: $m-medium * 2;
                 }
                 &__text {
                     hr {
@@ -32,6 +33,7 @@
                     @media (max-width: 576px) {
                         grid-template-columns: repeat(3, 1fr);
                         grid-template-rows: auto;
+                        row-gap: $m-large;
                     }
                     @media (min-width: 576px) and (max-width: 1200px) {
                         grid-template-columns: repeat(7, 1fr);
@@ -44,7 +46,8 @@
                     }
                     figure {
                         border-radius: 50%;
-                        border: 1px solid $turquoise;
+                        background-color: white;
+                        // border: 1px solid $turquoise;
                         @media (max-width: 768px) {
                             width: 60px;
                             height: 60px;
@@ -80,7 +83,7 @@
                     }
                 }
             }
-            &__col-moreinfoService {
+            &__col-infoService {
                 @media (max-width: 992px) {
                     margin-top: $m-large * 0.25;
                 }
@@ -102,3 +105,45 @@
         }
     }
 }
+
+
+.flexGroupCamaras {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding-bottom: 0.84rem;
+  }
+  
+  .flexGroupCamarasInside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    margin-bottom: 0.96rem;
+  }
+
+  .flexGroupCamarasInsideItem:nth-child(even) {
+  margin-left: 10px;
+}
+
+.flexGroupCamarasItem:nth-child(1) img {
+  width: 50px;
+}
+.flexGroupCamarasItem:nth-child(2) img {
+  width: 100px;
+}
+.flexGroupCamarasItem:nth-child(3) img {
+  width: 150px;
+}
+// .flexGroupCamarasItem:nth-child(4) img {
+//   width: 100px;
+// }
+// .flexGroupCamarasItem:nth-child(5) img {
+//   width: 150px;
+// }
+
