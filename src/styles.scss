@@ -113,6 +113,8 @@ hr {
     li {
         display: inline;
         list-style: none;
+        margin-right: $m-medium / 2;
+        margin-left: $m-medium / 4;
     }
 }
 .description {
