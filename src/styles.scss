@@ -102,6 +102,19 @@ hr {
 .common {
     @include commonText;
 }
+.common__subtitle {
+    font: {
+        size: $title-font-size-sm;
+        weight: $medium;
+    }
+}
+.common__list {
+    margin: 0;
+    li {
+        display: inline;
+        list-style: none;
+    }
+}
 .description {
     text-align: left;
     line-height: 126%;
