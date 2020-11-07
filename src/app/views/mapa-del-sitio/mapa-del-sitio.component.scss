@@ -5,7 +5,17 @@
     background-position-y: middle;
 }
 
-
+// Breadcumb large intro view
+.breadcrumb-lg-intro {
+    &__ol {
+        li {
+            &:first-child,
+            &:nth-child(2) span {
+                box-shadow: inset 0 -8px 0 rgba($color: $turquoise, $alpha: 0.15);
+            }
+        }
+    }
+}
 
 .ultrasonidos {
     padding-bottom: $m-large;

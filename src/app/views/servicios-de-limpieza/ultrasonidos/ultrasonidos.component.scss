@@ -6,6 +6,18 @@
 }
 
 
+// Breadcumb large intro view
+.breadcrumb-lg-intro {
+    &__ol {
+        li {
+            &:first-child,
+            &:nth-child(2) span {
+                box-shadow: inset 0 -8px 0 rgba($color: $turquoise, $alpha: 0.15);
+            }
+        }
+    }
+}
+
 .ultrasonidos {
     padding-bottom: $m-large;
     @include introSection;
@@ -42,8 +54,8 @@
                     }
                     figure {
                         border-radius: 50%;
-                        background-color: white;
-                        // border: 1px solid $turquoise;
+                        // background-color: white;
+                        border: 1px solid $turquoise;
                         @media (max-width: 768px) {
                             width: 60px;
                             height: 60px;
