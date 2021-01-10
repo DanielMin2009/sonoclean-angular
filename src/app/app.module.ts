@@ -1,11 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { from } from 'rxjs';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// Services 
+import { MessageService } from "./services/message.service";
+
 // Components
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { ContactFormComponent } from './components/shared/contact-form/contact-form.component';
 import { HomeComponent } from './views/home/home.component';
 import { EmpresaComponent } from './views/empresa/empresa.component';
 import { AplicacionesDeLimpiezaComponent } from './views/aplicaciones-de-limpieza/aplicaciones-de-limpieza.component';
@@ -28,8 +36,6 @@ import { CallToActionComponent } from './components/shared/call-to-action/call-t
 import { ClientsComponent } from './components/shared/clients/clients.component';
 import { CorporativeBarComponent } from './components/shared/corporative-bar/corporative-bar.component';
 import { ServicesLinksComponent } from './components/shared/services-links/services-links.component';
-
-
 
 
 @NgModule({
@@ -56,12 +62,17 @@ import { ServicesLinksComponent } from './components/shared/services-links/servi
     ClientsComponent,
     CorporativeBarComponent,
     ServicesLinksComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
