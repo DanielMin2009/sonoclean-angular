@@ -1,0 +1,234 @@
+<!-- <form autocomplete="off">
+
+  <div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Nombre</label>
+      <div class="col-8">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Nombre">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Apellido</label>
+      <div class="col-8">
+
+        <input class="form-control"
+               type="text"
+               placeholder="Apellido">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Correo</label>
+    <div class="col-8">
+
+      <input class="form-control"
+             type="email"
+             placeholder="Correo electrónico">
+    </div>
+  </div>
+
+
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary btn-block">
+        Guardar
+      </button>
+    </div>
+  </div>
+
+</form> -->
+
+<h4>Rellene los datos de contacto</h4>
+<hr />
+<form action="form.php" method="post" enctype="multipart/form-data" autocomplete="off" class="contact-form">
+
+    <div class="form-group">
+        <label for="txtName">Nombre y Apellidos</label>
+        <input type="text" id="txtName" name="txtName" pattern="[a-zA-Z]+" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="txtCompany">Empresa</label>
+        <input type="text" id="txtCompany" name="txtCompany" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="txtCompany">Sector</label>
+        <input type="text" id="txtSector" name="txtSector" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="txtEmail">Email</label>
+        <input type="email" id="txtEmail" name="txtEmail" class="form-control" required />
+    </div>
+    <h4 class="mt-large">Rellene los datos técnicos</h4>
+    <hr />
+    <!-- <div class="form-group">
+        <label for="txtMaterial">Material de las piezas</label> <br>
+
+        <select name="material" class="form-control" multiple>
+            <optgroup label="Group A">
+                <option value="Acero Inoxidable">Acero Inoxidable</option>
+                <option value="Hierro">Hierro</option>
+                <option value="Aluminio">Aluminio</option>
+                <option value="Laton">Latón</option>
+                <option value="Plasticos">Plásticos</option>
+                <option aria-valuemax="Otros">Otros</option>
+            </optgroup>
+        </select>
+    </div> -->
+
+    <div class="form-group">
+        <label for="txtMaterial">Material de las piezas</label>
+        <input type="text" name="material" id="material" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="tamanoPiezas">Tamaño de las piezas</label>
+        <input type="text" name="tamanoPiezas" id="tamanoPiezas" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label for="cantidadPiezas">Nº de piezas a limpiar por día / semana</label>
+        <input type="number" name="cantidadPiezas" id="cantidadPiezas" class="form-control"
+            placeholder="4 / día, 20 / semana...">
+    </div>
+
+    <div class="form-group">
+        <label for="tipoSuciedad">Tipos de suciedad en las piezas</label>
+        <input type="text" name="tipoSuciedad" id="tipoSuciedad" class="form-control"
+            placeholder="Grasas, aceites, cal..">
+    </div>
+
+    <div class="form-group">
+        <label for="textArea">Comentarios</label> <br>
+        <textarea name="comentarios" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+        <input type="hidden" name="recaptcha_response">
+    </div>
+    <button class="button slide-left" type="submit" name="enviar" value="Enviar">Enviar</button>
+
+</form>
+
+
+
+
+
+<!-- <form [formGroup]="form" (ngSubmit)="submit()" method="POST">
+    <div class="row align-items-center interior-height formBlock containerContact">
+        <div class="col-lg 12 col-xl-7 offset-xl-2 h1grid height-h1">
+            <div class="line-height-h1">
+                <h1>
+                    In Mountaber we know <br />
+                    there is a jewel per everyone
+                </h1>
+            </div>
+        </div>
+
+        <div class="w-100 d-none d-md-block"></div>
+
+        <div class="col-md-12 col-lg-3 col-xl-2 offset-xl-2 namegrid">
+            <span class="input1 input--madoka" #span>
+                <input (blur)="inputChange(0)" #input class="input__field input__field--madoka" id="input-1" type="text"
+                    formControlName="name" name="name" />
+
+                <label class="input__label input__label--madoka wrapper" for="input-1">
+                    <svg class="graphic graphic--madoka stroke1" width="100%" height="100%" viewBox="0 0 404 77"
+                        preserveAspectRatio="none">
+                        <path d="m0,0l404,0l0,77l-404,0l0,-77z" vector-effect="non-scaling-stroke" stroke-width="2" />
+                    </svg>
+                    <span class="input__label-content input__label-content--madoka">name</span>
+                    <div *ngIf="f.name.invalid && f.name.touched">
+                        <small *ngIf="f.name.errors.required">
+                            <span> * </span> Name is required
+                        </small>
+                    </div>
+                </label>
+            </span>
+        </div>
+
+        <div class="col-md-12 col-lg-4 col-xl-3 emailgrid">
+            <span class="input2 input--madoka" #span>
+                <input (blur)="inputChange(1)" #input class="input__field input__field--madoka" id="input-2" type="text"
+                    formControlName="email" name="email" />
+                <label class="input__label input__label--madoka" for="input-2">
+                    <svg class="graphic graphic--madoka stroke2" width="100%" height="100%" viewBox="0 0 404 77"
+                        preserveAspectRatio="none">
+                        <path d="m0,0l404,0l0,77l-404,0l0,-77z" vector-effect="non-scaling-stroke" stroke-width="2" />
+                    </svg>
+                    <span class="input__label-content input__label-content--madoka">e-mail</span>
+                    <div *ngIf="f.email.invalid && f.email.touched">
+                        <small *ngIf="f.email.errors.required">
+                            <span> * </span> E-mail is required
+                        </small>
+
+                        <small *ngIf="f.email.errors.email">
+                            <span> * </span> A valid e-mail is required
+                        </small>
+                    </div>
+                </label>
+            </span>
+        </div>
+
+        <div class="w-100 d-none d-md-block phonegrid"></div>
+
+        <div class="col-md-12 col-lg-3 col-xl-2 offset-xl-2">
+            <span class="input1 input--madoka" #span>
+                <input (blur)="inputChange(2)" #input class="input__field input__field--madoka" id="input-3" type="text"
+                    formControlName="phone" name="phone" />
+                <label class="input__label input__label--madoka" for="input-3">
+                    <svg class="graphic graphic--madoka stroke1" width="100%" height="100%" viewBox="0 0 404 77"
+                        preserveAspectRatio="none">
+                        <path d="m0,0l404,0l0,77l-404,0l0,-77z" vector-effect="non-scaling-stroke" stroke-width="2" />
+                    </svg>
+                    <span class="input__label-content input__label-content--madoka">phone</span>
+                    <div *ngIf="f.phone.invalid && f.phone.touched">
+                        <small *ngIf="f.phone.errors.required">
+                            <span> * </span> Phone is required
+                        </small>
+
+                        <small *ngIf="f.phone.errors.minlength">
+                            <span> * </span> Min. 5 digits required
+                        </small>
+                    </div>
+                </label>
+            </span>
+        </div>
+        <div class="col-md-12 col-lg-4 col-xl-3 messagegrid">
+            <span class="input2 input--madoka" #span>
+                <input (blur)="inputChange(3)" #input class="input__field input__field--madoka" id="input-4" type="text"
+                    formControlName="message" name="message" />
+                <label class="input__label input__label--madoka" for="input-4">
+                    <svg class="graphic graphic--madoka stroke2" width="100%" height="100%" viewBox="0 0 404 77"
+                        preserveAspectRatio="none">
+                        <path d="m0,0l404,0l0,77l-404,0l0,-77z" vector-effect="non-scaling-stroke" stroke-width="2" />
+                    </svg>
+                    <span class="input__label-content input__label-content--madoka">message</span>
+                    <div *ngIf="f.message.invalid && f.message.touched">
+                        <small *ngIf="f.message.errors.required">
+                            <span> * </span> Message is required
+                        </small>
+                        <small *ngIf="f.message.errors.maxLength">
+                            <span> * </span> Max. 256 digits required
+                        </small>
+                    </div>
+                </label>
+            </span>
+        </div>
+        <div class="col-md-12 col-lg-2 col-xl-2 col-xl-my buttongrid col-button">
+            <button type="submit" class="button mx-xl-2 button-line">
+                send
+            </button>
+        </div>
+    </div>
+</form> -->
