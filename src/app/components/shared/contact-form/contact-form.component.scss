@@ -10,9 +10,15 @@ hr {
 }
 
 .contact-form {
+    label {
+        margin-bottom: 0.2rem;
+    }
+    .form-group {
+        margin-bottom: 0.66rem;
+    }
     textarea {
         width: 100%;
-        padding: .375rem .75rem;
+        padding: 0.375rem 0.75rem;
     }
     .button {
         margin-top: 0;
@@ -28,4 +34,17 @@ hr {
             top: 40%;
         }
     }
+}
+
+.ng-valid {
+}
+.ng-touched {
+}
+.ng-dirty {
+}
+.ng-untouched {
+}
+.ng-pristine {
+}
+.ng-valid {
 }

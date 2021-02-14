@@ -1,11 +1,13 @@
 import {
   Component,
-  OnInit,
-  ElementRef,
-  ViewChildren,
-  QueryList,
+  OnInit
 } from "@angular/core";
-import { FormGroup, FormControl, Validators } from "@angular/forms";
+import {
+  FormBuilder, FormGroup,
+
+  Validators
+} from "@angular/forms";
+import Swal from "sweetalert2";
 import { MessageService } from "../../../services/message.service";
 
 @Component({
@@ -14,50 +16,56 @@ import { MessageService } from "../../../services/message.service";
   styleUrls: ["./contact-form.component.scss"],
 })
 export class ContactFormComponent implements OnInit {
-  @ViewChildren("span") span: QueryList<ElementRef>;
-  @ViewChildren("input") input: QueryList<ElementRef>;
-  form: FormGroup;
-  constructor(public messageService: MessageService) {}
+  myForm: FormGroup;
+  2
 
-  ngOnInit(): void {
-    this.form = new FormGroup({
-      name: new FormControl("", [Validators.required]),
-      email: new FormControl("", [Validators.email, Validators.required]),
-      phone: new FormControl("", [
-        Validators.required,
-        Validators.minLength(5),
-      ]),
-      message: new FormControl("", [
-        Validators.required,
-        Validators.maxLength(256),
-      ]),
-    });
+  emailRegEx: string = '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$';
+
+  constructor(public messageService: MessageService, private fb: FormBuilder) {
+    this.createForm();
   }
 
-  get f() {
-    return this.form.controls;
+  ngOnInit(): void {}
+
+  createForm() {
+    this.myForm = this.fb.group(
+      {
+        txtName: ['', Validators.required],
+        txtCompany: [''],
+        txtSector: [''],
+        txtEmail: ['', [Validators.required, Validators.pattern(this.emailRegEx)]],
+        txtPhone: ['', Validators.required],
+        txtMaterial: [''],
+        txtSize: [''],
+        txtQuantity: ['', Validators.required],
+        txtDirt: [''],
+        txtComments : ['', Validators.required],
+      }
+    );
   }
 
-  submit() {
-    console.log(this.form.value);
-    if (this.form.valid) {
-      this.messageService.sendMessage(this.form.value).subscribe(() => {
-        // Swal.fire({
-        //   position: "center",
-        //   icon: "success",
-        //   title: "The message has been sent successfully",
-        //   showConfirmButton: false,
-        //   timer: 1500,
-        // });
+  sendForm() {
+    console.log(this.myForm);
+    if ( this.myForm.invalid ) {
+      return Object.values( this.myForm.controls ).forEach( control => {     
+        if ( control instanceof FormGroup ) {
+          Object.values( control.controls ).forEach( control => control.markAsTouched() );
+        } else {
+          control.markAsTouched();
+        }        
       });
     }
-  }
 
-  inputChange(i: number) {
-    if (this.input.toArray()[i].nativeElement.value !== "") {
-      this.span.toArray()[i].nativeElement.classList.add("input--filled");
-    } else {
-      this.span.toArray()[i].nativeElement.classList.remove("input--filled");
-    }
+
+      this.messageService.sendMessage(this.myForm.value).subscribe(() => {
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "The message has been sent successfully",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
+    
   }
 }
