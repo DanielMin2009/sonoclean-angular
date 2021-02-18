@@ -30,10 +30,11 @@ $formdata = json_decode(file_get_contents('php://input'),true);
    $msg .= '<br><strong>Empresa</strong>: '.$txtCompany;
    $msg .= '<br><strong>Email</strong>: '.$txtEmail;
    $msg .= '<br><strong>Teléfono </strong>: '.$txtPhone;
-   $msg = '<strong>Nombre y Apellidos</strong>: '.$txtMaterial; 
-   $msg .= '<br><strong>Empresa</strong>: '.$txtQuantity;
-   $msg .= '<br><strong>Email</strong>: '.$txtDirt;
-   $msg .= '<br><strong>Teléfono </strong>: '.$txtComments;
+   $msg = '<br><strong>Material</strong>: '.$txtMaterial;
+   $msg = '<br><strong>Tamaño de las piezas</strong>: '.$txtSize;
+   $msg .= '<br><strong>Cantidad de piezas a limpiar</strong>: '.$txtQuantity;
+   $msg .= '<br><strong>Tipo de suciedad</strong>: '.$txtDirt;
+   $msg .= '<br><strong>Comentarios </strong>: '.$txtComments;
 
 
 $mail = new PHPMailer(true);
@@ -44,13 +45,13 @@ try {
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'sonowat@gmail.com';                     // SMTP username
-    $mail->Password   = 'HiTechUsCleaners2019$';                               // SMTP password
+    $mail->Username   = 'my email';                     // SMTP username
+    $mail->Password   = 'my password';                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
    //Recipients
-   $mail->setFrom('sonowat@gmail.com', 'SonoClean');
+   $mail->setFrom('my email', 'sonoclean');
    $mail->addAddress('contact@sonowat.com', 'SonoClean');
    // Content
    $mail->isHTML(true);                                  // Set email format to HTML

@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 })
 export class MessageService {
   url: string = "./assets/php/form.php";
-  // url: string = "http://localhost/angular/form.php";
+  // url: string = "http://localhost:4200/assets/php/form.php";
 
   constructor(private http: HttpClient) {}
 

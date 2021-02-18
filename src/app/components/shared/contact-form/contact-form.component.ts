@@ -17,7 +17,6 @@ import { MessageService } from "../../../services/message.service";
 })
 export class ContactFormComponent implements OnInit {
   myForm: FormGroup;
-  2
 
   emailRegEx: string = '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$';
 
@@ -61,7 +60,7 @@ export class ContactFormComponent implements OnInit {
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "The message has been sent successfully",
+          title: "El mensaje se ha enviado correctamente",
           showConfirmButton: false,
           timer: 1500,
         });
