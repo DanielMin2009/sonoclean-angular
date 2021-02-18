@@ -55,7 +55,7 @@ try {
    $mail->addAddress('contact@sonowat.com', 'SonoClean');
    // Content
    $mail->isHTML(true);                                  // Set email format to HTML
-   $mail->Subject = 'Contacto desde www.sonoclean.eu';
+   $mail->Subject = 'Contacto desde www.yourdomain.eu';
    $mail->Body    = $msg;
    //  $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
