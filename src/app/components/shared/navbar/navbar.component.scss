@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import "../../../../styles.scss";
 
 header {
@@ -33,7 +35,7 @@ header {
     width: calc(100% + 30px);
     margin: 0 -30px;
     @media (max-width: 992px) {
-        padding: $m-medium / 2 15px $m-medium / 2 15px;
+        padding: $m-medium * 0.5 15px $m-medium * 0.5 15px;
     }
     @media (min-width: 992px) and (max-width: 1200px) {
         padding: 0 5% $m-medium * 1.5 5%;
@@ -221,7 +223,7 @@ header {
     div {
         div {
             width: 100%;
-            margin: $m-medium / 1.5 0;
+            margin: math.div($m-medium, 1.5) 0;
             h2 {
                 @include h2;
                 color: $turquoise;
@@ -292,7 +294,7 @@ header {
         }
         figure {
             position: relative;
-            margin-bottom: $m-medium / 2;
+            margin-bottom: $m-medium * 0.5;
             overflow: hidden;
             z-index: 9;
             @include transition;

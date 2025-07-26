@@ -23,7 +23,7 @@
                 &__processGrid {
                     display: grid;
                     margin-bottom: $m-large;
-                    margin-top: $m-large / 2;
+                    margin-top: $m-large * 0.5;
                     @media (max-width: 576px) {
                         grid-template-columns: repeat(3, 1fr);
                         grid-template-rows: auto;
@@ -55,7 +55,7 @@
                         }
                         figcaption {
                             text-align: center;
-                            margin-top: $m-medium / 2;
+                            margin-top: $m-medium * 0.5;
                             line-height: 126%;
                             font : {
                                 size: $small-font-lg;
@@ -70,7 +70,7 @@
                 figcaption {
                     text-align: left;
                     line-height: 126%;
-                    margin-top: $m-medium / 2;
+                    margin-top: $m-medium * 0.5;
                     font : {
                         size: $small-font-lg;
                         weight: $light;

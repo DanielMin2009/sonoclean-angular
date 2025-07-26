@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import "../../../styles.scss";
 
 .bg-intro-large {
@@ -9,7 +11,7 @@
     &__container {
         &__row {
             &__col {
-                padding-top: $m-large / 2;
+                padding-top: $m-large * 0.5;
 
                 @include guttersCorrection;
 
@@ -20,7 +22,7 @@
                     color: white;
                     text-align: center;
                     h3 {
-                        margin-bottom: $m-medium / 6;
+                        margin-bottom: math.div($m-medium, 6);
                         font : {
                             weight: bold;
                         }
@@ -85,12 +87,12 @@
                 margin-bottom: $m-large;
                 ul {
                     li {
-                        margin-bottom: $m-large / 3;
+                        margin-bottom: math.div($m-large, 3);
                         font: {
                             weight: $medium;
                         }
                         img {
-                            margin-left: $m-medium / 2;
+                            margin-left: $m-medium * 0.5;
                         }
                         &:nth-child(1) {
                             @media (max-width: 786px) {

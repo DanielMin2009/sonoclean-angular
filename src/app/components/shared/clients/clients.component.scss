@@ -22,7 +22,7 @@
             grid-row-gap: 1.64rem;
             justify-items: stretch;
             align-items: stretch;
-            padding-top: $m-large / 2;
+            padding-top: $m-large * 0.5;
             @media (max-width: 768px) {
                 grid-template-columns: 1fr 1fr 1fr 1fr;
             }
